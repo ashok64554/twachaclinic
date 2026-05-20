@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+
 :root {
   --ink: #242536;
   --muted: #6c6b78;
@@ -15,7 +17,7 @@
   --logo-peach: #d69a78;
   --white: #ffffff;
   --font-body: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-heading: Georgia, "Times New Roman", serif;
+  --font-heading: "PT Serif", Georgia, "Times New Roman", serif;
 }
 
 * {
