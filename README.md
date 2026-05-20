@@ -1,3 +1,4 @@
+
 # Twacha Clinic Next.js
 
 Dynamic Next.js rebuild of the old PHP Twacha Skin Clinic website.
@@ -37,3 +38,6 @@ Appointment form posts to `/api/appointments`; contact form posts to `/api/conta
 ## Google Ads readiness notes
 
 The new content avoids guaranteed-result claims, removes intrusive ad patterns, includes medical disclaimers, uses clear contact details, and keeps treatment pages educational and consultation-led.
+
+# twachaclinic
+
