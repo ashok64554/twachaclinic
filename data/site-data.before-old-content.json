@@ -1,0 +1,881 @@
+{
+  "settings": {
+    "clinicName": "Twacha Skin Clinic",
+    "tagline": "Advanced dermatology, laser, hair and aesthetic care in Dwarka, New Delhi.",
+    "phone": "+91-93503-03663",
+    "email": "contact@twachaclinic.com",
+    "address": "Twacha Skin Clinic, A Unit of MaxDermCare Skin and Laser Pvt. Ltd. Sector 12A, Dwarka, New Delhi",
+    "googleMapsUrl": "https://www.google.com/maps?q=Twacha%20Skin%20%26%20Hair%20Clinic%20Dwarka%20New%20Delhi",
+    "heroTitle": "Science-led skin, hair and laser care in Dwarka",
+    "heroSubtitle": "Founded in 2007 by Dr. Tapesh Sharma and Dr. Richa Sharma, Twacha Skin Clinic offers dermatologist-led consultations, advanced procedures and personalised treatment planning.",
+    "aboutTitle": "Excellence in dermatology since 2007",
+    "aboutText": "Twacha Skin Clinic is a centre for clinical dermatology and aesthetics in Dwarka, New Delhi. The clinic combines consultation chambers, procedure rooms, medical photography and trusted skincare guidance so patients can receive clear diagnosis-led care.",
+    "adminPassword": "twacha-admin"
+  },
+  "doctors": [
+    {
+      "id": 1,
+      "slug": "dr-tapesh-sharma",
+      "name": "Dr. Tapesh Sharma",
+      "title": "Co-founder and Medical Director",
+      "image": "/assets/img/team/dr-tapesh-1.webp",
+      "summary": "Dr. Tapesh Sharma is a dermatologist and aesthetic physician with extensive experience in skin, hair and aesthetic treatments. He founded Twacha in 2007 and is known for face aesthetics, anti-wrinkle treatment and dermal fillers.",
+      "highlights": [
+        "MBBS from SNMC, Agra and postgraduate Dermatology specialization from LLRM, Meerut.",
+        "Specializes in skin, hair and aesthetic treatments.",
+        "Active member of IACD, IADVL, ACSI and CDSI.",
+        "Regularly conducts lectures and training for dermatologists.",
+        "Uses modern technology to improve patient care and clinic workflows."
+      ],
+      "active": true
+    },
+    {
+      "id": 2,
+      "slug": "dr-richa-sharma",
+      "name": "Dr. Richa Sharma",
+      "title": "Co-founder and Medical Director",
+      "image": "/assets/img/team/dr-richa-1.webp",
+      "summary": "Dr. Richa Sharma is a dermatologist with MBBS and MD Dermatology from Lady Hardinge Medical College, New Delhi. Her work spans hair disorders, aesthetic dermatology, patient-centred care and academic contribution.",
+      "highlights": [
+        "Completed MBBS and MD Dermatology at Lady Hardinge Medical College.",
+        "Former lecturer at SRMS Medical College and consultant dermatologist.",
+        "Speaker and author in national and international dermatology forums.",
+        "Authored aesthetic dermatology chapters on anti-wrinkle treatment and fillers.",
+        "Member of AAD, IADVL, ACSI, CDSI and professional dermatology bodies."
+      ],
+      "active": true
+    },
+    {
+      "id": 3,
+      "slug": "dr-neha-gupta",
+      "name": "Dr. Neha Gupta",
+      "title": "Consultant Dermatologist",
+      "image": "/assets/img/team/dr-neha-1.webp",
+      "summary": "Dr. Neha Gupta is a consultant dermatologist, aesthetic dermatologist and cosmetologist with experience in clinical dermatology, procedures, lasers and patient-centred skin care.",
+      "highlights": [
+        "Holds MBBS, MD and DNB in Dermatology.",
+        "Experienced in patient consultations and dermatological procedures.",
+        "Skilled in skin surgeries, lasers, microneedling, PRP, chemical peels and radiofrequency surgery.",
+        "Active participant and presenter at dermatology conferences.",
+        "Known for a warm and patient-centred consultation style."
+      ],
+      "active": true
+    },
+    {
+      "id": 4,
+      "slug": "dr-prachi-gupta",
+      "name": "Dr. Prachi Gupta",
+      "title": "Consultant Dermatologist",
+      "image": "/assets/img/team/Dr-Prachi-Gupta.webp",
+      "summary": "Dr. Prachi Gupta is a consultant dermatologist, aesthetic physician and hair transplant surgeon with over 12 years of clinical experience. Her areas include anti-wrinkle treatment, skin boosters, lasers and aesthetic transformations.",
+      "highlights": [
+        "M.B.B.S and D.D.V.L qualified in clinical and aesthetic dermatology.",
+        "Expertise in advanced skin and hair treatments.",
+        "Experienced hair transplant surgeon.",
+        "Regular attendee of dermatology workshops and aesthetic training programs.",
+        "Combines medical science with cosmetic precision."
+      ],
+      "active": true
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "slug": "chemical-peels",
+      "title": "Chemical Peels",
+      "category": "Face Treatments",
+      "image": "/assets/img/service/chemical-peels/chemical-peels.webp",
+      "excerpt": "Medical chemical peels for acne-prone skin, dullness, pigmentation and texture concerns.",
+      "content": "Chemical peels use selected exfoliating agents to improve skin tone, clogged pores, pigmentation and texture. At Twacha, peel strength and frequency are chosen after a dermatologist assesses skin sensitivity, sun exposure, medications and goals. The focus is safe, gradual improvement rather than exaggerated claims.",
+      "benefits": [
+        "Helps improve dullness and uneven tone",
+        "Options for acne-prone skin",
+        "Doctor-selected peel strength",
+        "Simple recovery and aftercare counselling"
+      ],
+      "metaTitle": "Chemical Peels in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Explore medical chemical peels at Twacha Skin Clinic, Dwarka for acne, pigmentation, dullness and texture after consultation.",
+      "active": true
+    },
+    {
+      "id": 2,
+      "slug": "derma-clean",
+      "title": "Derma Clean",
+      "category": "Face Treatments",
+      "image": "/assets/img/service/derma-clean/Aging.webp",
+      "excerpt": "Consultation-led derma clean care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Derma Clean at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Derma Clean in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for derma clean with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 3,
+      "slug": "melasma-condition",
+      "title": "Melasma",
+      "category": "Face Treatments",
+      "image": "/assets/img/banner/about-img.webp",
+      "excerpt": "Consultation-led melasma care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Melasma at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Melasma in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for melasma with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 4,
+      "slug": "hyperpigmentation-condition",
+      "title": "Hyper Pigmentation",
+      "category": "Face Treatments",
+      "image": "/assets/img/icon/Hyperpigmentation.png",
+      "excerpt": "Consultation-led hyper pigmentation care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Hyper Pigmentation at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Hyper Pigmentation in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for hyper pigmentation with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 5,
+      "slug": "acne-pimple-conditions",
+      "title": "Acne / Pimple Scars",
+      "category": "Face Treatments",
+      "image": "/assets/img/banner/about-img.webp",
+      "excerpt": "Consultation-led acne / pimple scars care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Acne / Pimple Scars at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Acne / Pimple Scars in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for acne / pimple scars with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 6,
+      "slug": "medifacial",
+      "title": "Medifacials",
+      "category": "Face Treatments",
+      "image": "/assets/img/service/medifacial/Acne-Erase-Medifacial-png.webp",
+      "excerpt": "Consultation-led medifacials care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Medifacials at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Medifacials in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for medifacials with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 7,
+      "slug": "intense-pulsed-light",
+      "title": "IPL Photofacial",
+      "category": "Face Treatments",
+      "image": "/assets/img/banner/about-img.webp",
+      "excerpt": "Consultation-led ipl photofacial care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "IPL Photofacial at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "IPL Photofacial in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for ipl photofacial with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 8,
+      "slug": "hydrafacial",
+      "title": "Hydrafacial",
+      "category": "Face Treatments",
+      "image": "/assets/img/service/hydrafacial/HydraFacial.webp",
+      "excerpt": "Clinic-based facial treatments for cleansing, hydration and skin refreshment.",
+      "content": "Hydrafacial and MediFacial services are designed to cleanse, exfoliate and hydrate the skin under clinic supervision. The session may be customised for dullness, congestion, oily skin or pre-event care. Twacha avoids one-size-fits-all facials and recommends suitable intervals based on skin condition.",
+      "benefits": [
+        "Deep cleansing and hydration",
+        "Customised for skin type",
+        "Useful before special occasions",
+        "Comfort-focused treatment experience"
+      ],
+      "metaTitle": "Hydrafacial in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Book dermatologist-guided Hydrafacial and MediFacial treatments at Twacha Skin Clinic, Dwarka.",
+      "active": true
+    },
+    {
+      "id": 9,
+      "slug": "microneedling-radiofrequency",
+      "title": "MNRF",
+      "category": "Face Treatments",
+      "image": "/assets/img/banner/about-img.webp",
+      "excerpt": "Consultation-led mnrf care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "MNRF at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "MNRF in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for mnrf with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 10,
+      "slug": "microblading",
+      "title": "Microblading",
+      "category": "Face Treatments",
+      "image": "/assets/img/service/microblading/Advanced Techniques.png",
+      "excerpt": "Consultation-led microblading care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Microblading at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Microblading in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for microblading with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 11,
+      "slug": "double-chin",
+      "title": "Double Chin",
+      "category": "Face Treatments",
+      "image": "/assets/img/service/double-chin/Advanced Techniques.png",
+      "excerpt": "Consultation-led double chin care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Double Chin at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Double Chin in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for double chin with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 12,
+      "slug": "hifu",
+      "title": "HIFU",
+      "category": "Face Treatments",
+      "image": "/assets/img/service/hifu/Advanced Techniques.png",
+      "excerpt": "Consultation-led hifu care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "HIFU at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "HIFU in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for hifu with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 13,
+      "slug": "laser-hair-reduction",
+      "title": "Laser Hair Removal",
+      "category": "Laser Treatments",
+      "image": "/assets/img/service/Laser-Hair-Reduction-treatment-1.webp",
+      "excerpt": "Dermatologist-guided laser hair reduction for long-term reduction of unwanted hair.",
+      "content": "Laser hair reduction at Twacha is planned after a consultation that reviews skin type, hair growth pattern, medical history and expectations. The procedure uses controlled light energy to target hair follicles while protecting surrounding skin. Sessions are spaced according to hair growth cycles, and the dermatologist explains preparation, aftercare and maintenance clearly.",
+      "benefits": [
+        "Personalised settings for skin type",
+        "Suitable for multiple body areas",
+        "Clear pre-care and aftercare guidance",
+        "Performed with clinic-grade technology"
+      ],
+      "metaTitle": "Laser Hair Reduction in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka for dermatologist-led laser hair reduction with personalised assessment and aftercare guidance.",
+      "active": true
+    },
+    {
+      "id": 14,
+      "slug": "pico-laser",
+      "title": "Picosecond Laser",
+      "category": "Laser Treatments",
+      "image": "/assets/img/service/pico-laser/Acne-Scar-Treatment.webp",
+      "excerpt": "Consultation-led picosecond laser care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Picosecond Laser at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Picosecond Laser in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for picosecond laser with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 15,
+      "slug": "q-switched-nd-yag-laser",
+      "title": "Q-Switched Nd Yag Laser",
+      "category": "Laser Treatments",
+      "image": "/assets/img/icon/q switched nd yag laser treatment.png",
+      "excerpt": "Consultation-led q-switched nd yag laser care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Q-Switched Nd Yag Laser at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Q-Switched Nd Yag Laser in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for q-switched nd yag laser with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 16,
+      "slug": "prp",
+      "title": "PRP",
+      "category": "Hair Growth Treatments",
+      "image": "/assets/img/service/prp-therapy/prp-1.webp",
+      "excerpt": "Platelet-rich plasma therapy planned after hair and scalp evaluation.",
+      "content": "PRP therapy uses processed platelets from the patient's own blood and may be recommended as part of a broader hair treatment plan. Suitability depends on diagnosis, severity, medical conditions and expectations. Twacha explains session intervals and expected response during consultation.",
+      "benefits": [
+        "Part of a comprehensive hair plan",
+        "Uses patient's own platelet concentrate",
+        "Doctor-supervised protocol",
+        "Timeline and maintenance counselling"
+      ],
+      "metaTitle": "PRP Hair Treatment in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Explore PRP therapy for hair concerns at Twacha Skin Clinic with dermatologist consultation in Dwarka.",
+      "active": true
+    },
+    {
+      "id": 17,
+      "slug": "qr-678",
+      "title": "QR678",
+      "category": "Hair Growth Treatments",
+      "image": "/assets/img/service/qr-678/advanced formulations.png",
+      "excerpt": "Consultation-led qr678 care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "QR678 at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "QR678 in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for qr678 with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 18,
+      "slug": "regenerative-skin-therapy",
+      "title": "Regenerative Skin Therapy",
+      "category": "Hair Growth Treatments",
+      "image": "/assets/img/service/regenerative-skin-therapy/Active.webp",
+      "excerpt": "Consultation-led regenerative skin therapy care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Regenerative Skin Therapy at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Regenerative Skin Therapy in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for regenerative skin therapy with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 19,
+      "slug": "gfc",
+      "title": "GFC",
+      "category": "Hair Growth Treatments",
+      "image": "/assets/img/service/gfc-therapy/gfc-BA-1.webp",
+      "excerpt": "Consultation-led gfc care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "GFC at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "GFC in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for gfc with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 20,
+      "slug": "hair-drip",
+      "title": "Hair Drip",
+      "category": "Hair Growth Treatments",
+      "image": "/assets/img/service/hair-drip/Advanced Formulations.png",
+      "excerpt": "Consultation-led hair drip care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Hair Drip at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Hair Drip in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for hair drip with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 21,
+      "slug": "hair-loss",
+      "title": "Hair Loss Treatment",
+      "category": "Hair Growth Treatments",
+      "image": "/assets/img/about/Hairfall.webp",
+      "excerpt": "Diagnosis-led hair fall and hair thinning consultations with medical and procedural options.",
+      "content": "Hair loss can be linked to genetics, nutrition, hormones, stress, scalp conditions or medical history. Twacha begins with diagnosis, then recommends medicines, scalp care, PRP or other procedures where appropriate. The clinic emphasises realistic treatment timelines and follow-up.",
+      "benefits": [
+        "Root-cause assessment",
+        "Medical and procedural options",
+        "Scalp and lifestyle guidance",
+        "Follow-up for progress review"
+      ],
+      "metaTitle": "Hair Loss Treatment in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka for dermatologist-led hair fall and hair thinning assessment.",
+      "active": true
+    },
+    {
+      "id": 22,
+      "slug": "hairfall",
+      "title": "Hair Fall / Loss",
+      "category": "Conditions",
+      "image": "/assets/img/about/Hairfall.webp",
+      "excerpt": "Consultation-led hair fall / loss care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Hair Fall / Loss at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Hair Fall / Loss in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for hair fall / loss with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 23,
+      "slug": "dermal-fillers",
+      "title": "Dermal Fillers",
+      "category": "Cosmetic Injectables",
+      "image": "/assets/img/service/dermal-fillers/dermal-fillers1.webp",
+      "excerpt": "Dermatologist-administered fillers for volume support, contours and facial harmony.",
+      "content": "Dermal fillers may be considered for volume loss, lip definition, facial contours and selected lines. At Twacha, filler planning is conservative and anatomy-led, with emphasis on suitability, product selection, safety and follow-up. Patients are counselled about limitations and possible risks before treatment.",
+      "benefits": [
+        "Anatomy-led planning",
+        "Conservative aesthetic approach",
+        "Medical screening before procedure",
+        "Aftercare and review support"
+      ],
+      "metaTitle": "Dermal Fillers in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic for dermatologist-led dermal filler planning in Dwarka, New Delhi.",
+      "active": true
+    },
+    {
+      "id": 24,
+      "slug": "anti-wrinkle-treatment",
+      "title": "Anti-Wrinkle Treatment",
+      "category": "Cosmetic Injectables",
+      "image": "/assets/img/service/anti-wrinkle-treatment/anti-wrinkle-treatment-2.webp",
+      "excerpt": "Consultation-led anti-wrinkle treatment care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Anti-Wrinkle Treatment at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Anti-Wrinkle Treatment in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for anti-wrinkle treatment with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 25,
+      "slug": "thread-lift",
+      "title": "Threads",
+      "category": "Cosmetic Injectables",
+      "image": "/assets/img/service/thread-lift/acne-scarring.webp",
+      "excerpt": "Consultation-led threads care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Threads at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Threads in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for threads with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 26,
+      "slug": "skin-rejuvenation-treatment",
+      "title": "Skin Rejuvenation Treatment",
+      "category": "Cosmetic Injectables",
+      "image": "/assets/img/banner/about-img.webp",
+      "excerpt": "Comprehensive rejuvenation plans for texture, tone, hydration and age-related concerns.",
+      "content": "Skin rejuvenation at Twacha is not a single treatment. It is a planned approach that may include skincare, lasers, peels, boosters, facials or energy-based devices according to skin goals. The dermatologist guides selection and explains what each option can and cannot do.",
+      "benefits": [
+        "Custom plans for texture and tone",
+        "Multiple dermatologist-led modalities",
+        "Suitable for maintenance and correction",
+        "Education-first consultation"
+      ],
+      "metaTitle": "Skin Rejuvenation in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Discover dermatologist-guided skin rejuvenation plans at Twacha Skin Clinic in Dwarka.",
+      "active": true
+    },
+    {
+      "id": 27,
+      "slug": "eyebrow-lift",
+      "title": "Brow Lift",
+      "category": "Cosmetic Injectables",
+      "image": "/assets/img/service/eyebrow-lift/benefits-1.png",
+      "excerpt": "Consultation-led brow lift care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Brow Lift at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Brow Lift in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for brow lift with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 28,
+      "slug": "mesotherapy",
+      "title": "Mesotherapy",
+      "category": "Cosmetic Injectables",
+      "image": "/assets/img/service/mesotherapy/Aging-Skin.webp",
+      "excerpt": "Consultation-led mesotherapy care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Mesotherapy at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Mesotherapy in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for mesotherapy with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 29,
+      "slug": "skin-booster-injections",
+      "title": "Skin Boosters",
+      "category": "Cosmetic Injectables",
+      "image": "/assets/img/banner/about-img.webp",
+      "excerpt": "Consultation-led skin boosters care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Skin Boosters at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Skin Boosters in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for skin boosters with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 30,
+      "slug": "wrinkle",
+      "title": "Wrinkles",
+      "category": "Cosmetic Injectables",
+      "image": "/assets/img/service/wrinkle/Advanced-Technology.png",
+      "excerpt": "Consultation-led wrinkles care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Wrinkles at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Wrinkles in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for wrinkles with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 31,
+      "slug": "face-lift",
+      "title": "Face Lift",
+      "category": "Cosmetic Injectables",
+      "image": "/assets/img/service/face-lift/Advanced-Techniques.png",
+      "excerpt": "Consultation-led face lift care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Face Lift at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Face Lift in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for face lift with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 32,
+      "slug": "lip-beautification",
+      "title": "Lip Beautification",
+      "category": "Cosmetic Injectables",
+      "image": "/assets/img/service/lip-beautification/Advanced-Techniques.png",
+      "excerpt": "Consultation-led lip beautification care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Lip Beautification at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Lip Beautification in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for lip beautification with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 33,
+      "slug": "ear-lobe-repair",
+      "title": "Ear Lobe Repair",
+      "category": "Cosmetic Injectables",
+      "image": "/assets/img/icon/ear-lobe-repair.png",
+      "excerpt": "Consultation-led ear lobe repair care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Ear Lobe Repair at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Ear Lobe Repair in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for ear lobe repair with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 34,
+      "slug": "face-slimming",
+      "title": "Face Slimming",
+      "category": "Cosmetic Injectables",
+      "image": "/assets/img/service/face-slimming/Advanced Techniques.png",
+      "excerpt": "Consultation-led face slimming care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Face Slimming at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Face Slimming in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for face slimming with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 35,
+      "slug": "skin-bio-remodelling",
+      "title": "Skin Bio-remodelling",
+      "category": "Cosmetic Injectables",
+      "image": "/assets/img/service/laser-hair-reduction/skin-bio-remodelling-benefits.png",
+      "excerpt": "Consultation-led skin bio-remodelling care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Skin Bio-remodelling at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Skin Bio-remodelling in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for skin bio-remodelling with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 36,
+      "slug": "body-polish",
+      "title": "Body Polish",
+      "category": "Body Treatments",
+      "image": "/assets/img/service/body-polish/Anyone-Looking-for-Skin-Rejuvenation.webp",
+      "excerpt": "Consultation-led body polish care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Body Polish at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Body Polish in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for body polish with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 37,
+      "slug": "stretch-marks-treatment",
+      "title": "Stretch Marks",
+      "category": "Body Treatments",
+      "image": "/assets/img/service/stretch-marks/Stretch-Marks-Treatment-2.webp",
+      "excerpt": "Consultation-led stretch marks care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Stretch Marks at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Stretch Marks in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for stretch marks with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 38,
+      "slug": "iv-nutrition",
+      "title": "IV Nutrition",
+      "category": "Body Treatments",
+      "image": "/assets/img/service/iv-nutrition/Anti-Aging-IV.webp",
+      "excerpt": "Consultation-led iv nutrition care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "IV Nutrition at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "IV Nutrition in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for iv nutrition with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 39,
+      "slug": "aging",
+      "title": "Ageing",
+      "category": "Conditions",
+      "image": "/assets/img/condition/aging/anti-aging.webp",
+      "excerpt": "Consultation-led ageing care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Ageing at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Ageing in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for ageing with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 40,
+      "slug": "aesthetic-and-beauty-enhancement",
+      "title": "Aesthetic / Beauty Enhancement",
+      "category": "Conditions",
+      "image": "/assets/img/banner/about-img.webp",
+      "excerpt": "Consultation-led aesthetic / beauty enhancement care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Aesthetic / Beauty Enhancement at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Aesthetic / Beauty Enhancement in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for aesthetic / beauty enhancement with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 41,
+      "slug": "dermatologic-conditions",
+      "title": "Dermatological Conditions",
+      "category": "Conditions",
+      "image": "/assets/img/banner/about-img.webp",
+      "excerpt": "Consultation-led dermatological conditions care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Dermatological Conditions at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Dermatological Conditions in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for dermatological conditions with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 42,
+      "slug": "excessive-hair-growth",
+      "title": "Excessive Hair Growth",
+      "category": "Conditions",
+      "image": "/assets/img/banner/about-img.webp",
+      "excerpt": "Consultation-led excessive hair growth care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "Excessive Hair Growth at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "Excessive Hair Growth in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for excessive hair growth with dermatologist-led assessment and guidance.",
+      "active": true
+    },
+    {
+      "id": 43,
+      "slug": "3d-skin-analyzer",
+      "title": "3D Skin Analyzer",
+      "category": "Technology",
+      "image": "/assets/img/banner/about-img.webp",
+      "excerpt": "Consultation-led 3d skin analyzer care at Twacha Skin Clinic in Dwarka, New Delhi.",
+      "content": "3D Skin Analyzer at Twacha Skin Clinic is planned after a dermatologist reviews your concern, skin or hair type, medical history and expectations. The clinic focuses on safe assessment, realistic counselling and clear aftercare instead of one-size-fits-all promises. Your doctor may recommend skincare, procedures, lasers, injectables or follow-up care depending on suitability.",
+      "benefits": [
+        "Dermatologist-led consultation",
+        "Personalised treatment planning",
+        "Clear pre-care and aftercare guidance",
+        "Realistic expectations and follow-up support"
+      ],
+      "metaTitle": "3D Skin Analyzer in Dwarka | Twacha Skin Clinic",
+      "metaDescription": "Consult Twacha Skin Clinic in Dwarka, New Delhi for 3d skin analyzer with dermatologist-led assessment and guidance.",
+      "active": true
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Clinic Patient",
+      "note": "The consultation was clear and the doctor explained my treatment plan step by step.",
+      "rating": 5,
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Skin Care Patient",
+      "note": "I appreciated the hygiene, staff behaviour and realistic guidance before starting treatment.",
+      "rating": 5,
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Hair Care Patient",
+      "note": "The team focused on diagnosis first and gave a practical follow-up plan.",
+      "rating": 5,
+      "active": true
+    }
+  ],
+  "appointments": []
+}
