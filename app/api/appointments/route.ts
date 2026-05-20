@@ -20,7 +20,10 @@ export async function POST(request: Request) {
     ].filter(Boolean).join("\n")
   });
 
-  const email = buildLeadEmail("Appointment", appointment);
+  const email = buildLeadEmail("Appointment", {
+    ...appointment,
+    preferredDate: body.preferredDate ? String(body.preferredDate) : ""
+  });
   const mail = await sendMail({ ...email, replyTo: appointment.email || undefined });
 
   return NextResponse.json({ appointment, mail }, { status: 201 });

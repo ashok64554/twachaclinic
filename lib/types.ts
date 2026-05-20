@@ -63,6 +63,13 @@ export type VideoItem = {
   serviceSlug?: string;
 };
 
+export type GalleryImage = {
+  id: number;
+  image: string;
+  title: string;
+  active: boolean;
+};
+
 export type Appointment = {
   id: number;
   name: string;
@@ -103,6 +110,7 @@ export type SiteData = {
   services: Service[];
   pages: SitePage[];
   videos?: VideoItem[];
+  gallery: GalleryImage[];
   testimonials: Testimonial[];
   appointments: Appointment[];
   contactLeads: ContactLead[];

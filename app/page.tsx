@@ -1,11 +1,14 @@
 import Link from "next/link";
-import { ArrowRight, Award, CalendarDays, CheckCircle2, Play, Quote, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, Award, CalendarDays, CheckCircle2, Quote, ShieldCheck, Sparkles, Youtube } from "lucide-react";
 import { AppointmentForm } from "@/components/AppointmentForm";
 import { DoctorCard } from "@/components/DoctorCard";
+import { GalleryLightbox } from "@/components/GalleryLightbox";
 import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { VideoTestimonialModal } from "@/components/VideoTestimonialModal";
 import { getSiteData } from "@/lib/data";
+import { getGalleryImages } from "@/lib/gallery";
 import { clinicJsonLd } from "@/lib/seo";
 
 export default async function Home() {
@@ -116,16 +119,7 @@ export default async function Home() {
     "hifu",
     "thread-lift"
   ].map((slug) => services.find((service) => service.slug === slug)).filter(Boolean);
-  const galleryItems = [
-    ["/assets/img/gallery/403 x 403.jpg", "Skin Treatment", "Skin"],
-    ["/assets/img/gallery/404 x 403.jpg", "Skin Treatment", "Skin"],
-    ["/assets/img/gallery/403 x 836.jpg", "Body Treatment", "Body"],
-    ["/assets/img/gallery/Image-3.webp", "Skin Treatment", "Skin Treatment"],
-    ["/assets/img/gallery/Image-2.webp", "Body Treatment", "Body"],
-    ["/assets/img/gallery/Image-1.webp", "Skin Treatment", "Skin"],
-    ["/assets/img/service/double-chin/double-chin.webp", "Skin Treatment", "Skin"],
-    ["/assets/img/gallery/404 x 403.jpg", "Skin Treatment", "Skin"]
-  ];
+  const galleryItems = getGalleryImages(data).slice(0, 8);
   const whyChooseItems = [
     [
       "Dedicated Expertise",
@@ -254,7 +248,16 @@ export default async function Home() {
               <p><Award size={18} /> Recognised among leading skin and hair clinics in Delhi NCR.</p>
             </div>
           </div>
-          <img src="/assets/img/banner/about-img.webp" alt="Twacha consultation room" />
+          <a
+            className="about-youtube-link"
+            href="https://youtube.com/@twachaclinics?si=HCBpdIv35sIrPq8q"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open Twacha Clinic YouTube channel"
+          >
+            <img src="/assets/img/banner/about-img.webp" alt="Twacha consultation room" />
+            <span><Youtube size={18} /> Twacha Clinic YouTube</span>
+          </a>
         </section>
 
         <section className="section service-discovery" id="service-sec">
@@ -402,21 +405,9 @@ export default async function Home() {
               <span className="eyebrow">Our Gallery</span>
               <h2>Explore Us</h2>
             </div>
-            <Link href="/about">Know more</Link>
+            <Link href="/gallery">Know more</Link>
           </div>
-          <div className="home-gallery-grid">
-            {galleryItems.map(([image, title]) => (
-              <a
-                className="home-gallery-card"
-                href={image}
-                key={`${image}-${title}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={image} alt={`${title} gallery image`} />
-              </a>
-            ))}
-          </div>
+          <GalleryLightbox items={galleryItems} />
         </section>
 
         <section className="section doctors-band">
@@ -446,22 +437,7 @@ export default async function Home() {
             </div>
             <Link href="/videos">View all videos <ArrowRight size={18} /></Link>
           </div>
-          <div className="happy-faces-layout">
-            <a className="happy-face-feature" href={videoTestimonials[0].url} target="_blank" rel="noreferrer">
-              <img src={videoTestimonials[0].image} alt={videoTestimonials[0].title} />
-              <span className="happy-play"><Play size={28} fill="currentColor" /></span>
-              <b>{videoTestimonials[0].title}</b>
-            </a>
-            <div className="happy-face-list">
-              {videoTestimonials.slice(1, 5).map((item) => (
-                <a href={item.url} key={item.url} target="_blank" rel="noreferrer">
-                  <img src={item.image} alt={item.title} />
-                  <span><Play size={16} fill="currentColor" /></span>
-                  <b>{item.title}</b>
-                </a>
-              ))}
-            </div>
-          </div>
+          <VideoTestimonialModal videos={videoTestimonials} />
         </section>
 
         {testimonials.length > 0 && (

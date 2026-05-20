@@ -1,5 +1,17 @@
 import Link from "next/link";
-import { Facebook, Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import {
+  CalendarDays,
+  ContactRound,
+  Facebook,
+  Home,
+  Instagram,
+  Mail,
+  MapPin,
+  Phone,
+  PlaySquare,
+  Stethoscope,
+  Youtube
+} from "lucide-react";
 import type { Service, SiteSettings } from "@/lib/types";
 
 export function SiteFooter({ settings, services }: { settings: SiteSettings; services: Service[] }) {
@@ -31,6 +43,7 @@ export function SiteFooter({ settings, services }: { settings: SiteSettings; ser
     <footer className="footer">
       <div className="footer-grid">
         <div className="footer-about">
+          <img className="footer-logo" src="/assets/img/twacha-logo.png" alt="Twacha Skin Clinic" />
           <h3>About Twacha Skin Clinic</h3>
           <p>
             At TWACHA, our goal is to provide the best skin care that you need. Our doctors have years of experience in
@@ -87,6 +100,28 @@ export function SiteFooter({ settings, services }: { settings: SiteSettings; ser
           <a href="https://youtube.com/@twachaclinics?si=HCBpdIv35sIrPq8q" target="_blank" rel="noreferrer" aria-label="YouTube"><Youtube size={17} /></a>
         </div>
       </div>
+      <nav className="mobile-quick-menu" aria-label="Mobile quick access">
+        <Link href="/">
+          <Home size={18} aria-hidden="true" />
+          <span>Home</span>
+        </Link>
+        <Link href="/book-appointment">
+          <CalendarDays size={18} aria-hidden="true" />
+          <span>Appointment</span>
+        </Link>
+        <Link href="/contact">
+          <ContactRound size={18} aria-hidden="true" />
+          <span>Contact</span>
+        </Link>
+        <Link href="/services">
+          <Stethoscope size={18} aria-hidden="true" />
+          <span>Services</span>
+        </Link>
+        <Link href="/videos">
+          <PlaySquare size={18} aria-hidden="true" />
+          <span>Videos</span>
+        </Link>
+      </nav>
     </footer>
   );
 }

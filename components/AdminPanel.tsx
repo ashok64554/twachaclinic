@@ -9,6 +9,7 @@ import {
   Eye,
   EyeOff,
   FileText,
+  Images,
   KeyRound,
   LayoutDashboard,
   Lock,
@@ -26,9 +27,9 @@ import {
   Users,
   Video
 } from "lucide-react";
-import type { ContentSection, Doctor, Service, SiteData, SitePage, Testimonial, VideoItem } from "@/lib/types";
+import type { ContentSection, Doctor, GalleryImage, Service, SiteData, SitePage, Testimonial, VideoItem } from "@/lib/types";
 
-type AdminSection = "dashboard" | "settings" | "pages" | "services" | "doctors" | "videos" | "testimonials" | "appointments" | "contactLeads" | "account";
+type AdminSection = "dashboard" | "settings" | "pages" | "services" | "doctors" | "videos" | "gallery" | "testimonials" | "appointments" | "contactLeads" | "account";
 type AdminUser = { id: number; username: string; email: string; role: string };
 
 const navItems: { id: AdminSection; label: string; icon: typeof LayoutDashboard }[] = [
@@ -38,6 +39,7 @@ const navItems: { id: AdminSection; label: string; icon: typeof LayoutDashboard 
   { id: "services", label: "Services", icon: Stethoscope },
   { id: "doctors", label: "Doctors", icon: UserRound },
   { id: "videos", label: "Videos", icon: Video },
+  { id: "gallery", label: "Gallery", icon: Images },
   { id: "testimonials", label: "Testimonials", icon: Star },
   { id: "appointments", label: "Appointments", icon: CalendarDays },
   { id: "contactLeads", label: "Contact Leads", icon: ContactRound },
@@ -345,8 +347,8 @@ const adminRuntimeCss = `
   /* A aroyaa-style slim header */
   .admin-layout { grid-template-columns: 324px minmax(0, 1fr); background: #f4f7fb; }
   .admin-sidebar { padding: 28px 16px; background: #0b1020; }
-  .admin-brand { display: block; padding: 0 0 44px; border-bottom: 0; }
-  .admin-brand img { width: 190px; height: auto; max-height: 78px; object-fit: contain; background: transparent; border-radius: 0; }
+  .admin-brand { display: grid; place-items: center; margin: 0 0 34px; padding: 18px 14px; background: rgba(255,255,255,.96); border: 1px solid rgba(255,255,255,.12); border-radius: 24px; box-shadow: 0 18px 42px rgba(0,0,0,.18); }
+  .admin-brand img { display: block; width: min(100%, 210px); height: auto; max-height: 92px; object-fit: contain; background: transparent; border-radius: 0; filter: none; }
   .admin-brand small, .admin-brand span { display: none; }
   .admin-sidebar nav { gap: 22px; padding-top: 18px; }
   .admin-sidebar button { min-height: 54px; padding: 0 16px; color: #a8b3c7; border-radius: 16px; font-size: 18px; font-weight: 750; }
@@ -412,6 +414,14 @@ const adminRuntimeCss = `
   @media (max-width: 1280px) { .admin-access-security, .admin-access-card-grid { grid-template-columns: 1fr; } .admin-access-form { grid-template-columns: 1fr; } .admin-access-help { grid-column: auto; } .admin-access-form .primary-btn { justify-self: start; } }
   @media (max-width: 1280px) { .admin-section-edit { grid-template-columns: repeat(2, minmax(0, 1fr)); } .admin-section-edit label:has(textarea) { grid-column: 1 / -1; } }
   @media (max-width: 980px) { .admin-login-page, .admin-layout, .admin-crud, .admin-topbar, .admin-stat-grid, .admin-form-grid, .admin-section-edit, .lead-list article, .admin-account-grid { grid-template-columns: 1fr; } .admin-login-art { display: none; } .admin-sidebar { position: static; height: auto; } .admin-sidebar nav { grid-template-columns: repeat(2, minmax(0, 1fr)); } .admin-savebar { flex-direction: column; align-items: stretch; } .admin-form-grid label:has(textarea), .admin-form-grid .wide-field, .admin-section-edit label:has(textarea) { grid-column: auto; } .admin-image-uploader { grid-template-columns: 1fr; } }
+  @media (min-width: 741px) and (max-width: 980px) {
+    .admin-layout { grid-template-columns: 300px minmax(0, 1fr); align-items: stretch; min-height: 100vh; }
+    .admin-sidebar { position: sticky; top: 0; height: 100vh; min-height: 100vh; overflow-y: auto; }
+    .admin-sidebar nav { grid-template-columns: 1fr; }
+    .admin-sidebar-logout { position: sticky; bottom: 0; }
+    .admin-main { min-width: 0; padding: 0 24px 38px; }
+    .admin-topbar { margin: 0 -24px 28px; padding: 0 24px; }
+  }
   @media (max-width: 640px) { .admin-main { padding: 18px; } .admin-sidebar nav { grid-template-columns: 1fr; } .admin-dashboard-hero { flex-direction: column; align-items: flex-start; } .admin-panel-card { padding: 22px; } }
   @media (min-width: 1200px) and (max-width: 1600px) {
     .admin-layout { grid-template-columns: clamp(248px, 19vw, 300px) minmax(0, 1fr); }
@@ -421,7 +431,8 @@ const adminRuntimeCss = `
     .admin-sidebar button svg { width: 42px; height: 42px; padding: 12px; border-radius: 14px; }
     .admin-main { padding: 0 clamp(22px, 2.2vw, 36px) 40px; }
     .admin-topbar { min-height: 78px; margin: 0 calc(clamp(22px, 2.2vw, 36px) * -1) 28px; padding: 0 clamp(22px, 2.2vw, 36px); gap: 14px; }
-    .admin-brand img { width: clamp(148px, 12vw, 180px); max-height: 68px; }
+    .admin-brand { margin-bottom: 26px; padding: 14px 12px; border-radius: 20px; }
+    .admin-brand img { width: min(100%, clamp(168px, 14vw, 205px)); max-height: 82px; }
     .admin-breadcrumb { font-size: clamp(18px, 1.6vw, 23px); }
     .admin-crud-hero, .admin-filter-strip, .admin-panel-card, .admin-dashboard-hero { padding: clamp(24px, 2vw, 32px); border-radius: 24px; }
     .admin-crud-hero h2, .admin-settings-hero h2, .admin-dashboard-hero h1 { font-size: clamp(34px, 3vw, 48px); }
@@ -455,7 +466,7 @@ export function AdminPanel() {
   const [section, setSection] = useState<AdminSection>("dashboard");
   const [message, setMessage] = useState("");
   const [query, setQuery] = useState("");
-  const [selected, setSelected] = useState({ pages: 0, services: 0, doctors: 0, videos: 0, testimonials: 0 });
+  const [selected, setSelected] = useState({ pages: 0, services: 0, doctors: 0, videos: 0, gallery: 0, testimonials: 0 });
   const [passwordForm, setPasswordForm] = useState({ current: "", next: "", confirm: "" });
 
   useEffect(() => {
@@ -531,6 +542,7 @@ export function AdminPanel() {
       { label: "Services", value: data.services.length, icon: Stethoscope },
       { label: "Doctors", value: data.doctors.length, icon: Users },
       { label: "Videos", value: data.videos?.length || 0, icon: Video },
+      { label: "Gallery", value: data.gallery?.length || 0, icon: Images },
       { label: "Appointments", value: data.appointments.length, icon: CalendarDays },
       { label: "Contact Leads", value: data.contactLeads.length, icon: ContactRound }
     ];
@@ -648,6 +660,12 @@ export function AdminPanel() {
     mutate({ ...current, videos });
   }
 
+  function updateGallery(index: number, patch: Partial<GalleryImage>) {
+    const gallery = [...(current.gallery || [])];
+    gallery[index] = { ...gallery[index], ...patch };
+    mutate({ ...current, gallery });
+  }
+
   function updatePageSection(pageIndex: number, sectionIndex: number, patch: Partial<ContentSection>) {
     const page = current.pages[pageIndex];
     updatePage(pageIndex, {
@@ -667,6 +685,7 @@ export function AdminPanel() {
   const activeService = current.services[selected.services] || current.services[0];
   const activeDoctor = current.doctors[selected.doctors] || current.doctors[0];
   const activeVideo = (current.videos || [])[selected.videos] || (current.videos || [])[0];
+  const activeGalleryImage = (current.gallery || [])[selected.gallery] || (current.gallery || [])[0];
   const activeTestimonial = current.testimonials[selected.testimonials] || current.testimonials[0];
 
   return (
@@ -747,6 +766,7 @@ export function AdminPanel() {
                 <button onClick={() => setSection("pages")}>Manage pages</button>
                 <button onClick={() => setSection("services")}>Manage services</button>
                 <button onClick={() => setSection("videos")}>Manage videos</button>
+                <button onClick={() => setSection("gallery")}>Manage gallery</button>
                 <button onClick={() => setSection("appointments")}>View appointments</button>
                 <button onClick={() => setSection("contactLeads")}>View contact leads</button>
               </div>
@@ -772,6 +792,7 @@ export function AdminPanel() {
               <article className="admin-mini-card"><span>Services</span><b>{current.services.length}</b><p>Treatment services managed by admin.</p></article>
               <article className="admin-mini-card"><span>Doctors</span><b>{current.doctors.length}</b><p>Team profiles available on site.</p></article>
               <article className="admin-mini-card"><span>Videos</span><b>{current.videos?.length || 0}</b><p>YouTube and Instagram resources.</p></article>
+              <article className="admin-mini-card"><span>Gallery</span><b>{current.gallery?.length || 0}</b><p>Clinic and treatment images.</p></article>
               <article className="admin-mini-card"><span>Appointments</span><b>{current.appointments.length}</b><p>Booking form enquiries.</p></article>
               <article className="admin-mini-card"><span>Contact Leads</span><b>{current.contactLeads.length}</b><p>Contact page messages.</p></article>
             </section>
@@ -951,6 +972,54 @@ export function AdminPanel() {
           </CrudShell>
         )}
 
+        {section === "gallery" && (
+          <CrudShell
+            title="Gallery"
+            query={query}
+            onQuery={setQuery}
+            action={(
+              <MultiImageUploadButton
+                onUploaded={(urls) => {
+                  const startId = Math.max(0, ...(current.gallery || []).map((item) => item.id));
+                  const newImages = urls.map((url, index) => ({ id: startId + index + 1, image: url, title: "Gallery image", active: true }));
+                  const gallery = [...(current.gallery || []), ...newImages];
+                  mutate({ ...current, gallery });
+                  selectAndOpen({ gallery: gallery.length - 1 });
+                }}
+              />
+            )}
+            onAdd={() => {
+              const gallery = [...(current.gallery || []), { id: nextId(current.gallery || []), title: "Gallery image", image: "/assets/img/gallery/403 x 403.jpg", active: true }];
+              mutate({ ...current, gallery });
+              selectAndOpen({ gallery: gallery.length - 1 });
+            }}
+            list={filterByQuery(current.gallery || []).map(({ item, index }) => ({
+              id: item.id,
+              title: item.title,
+              subtitle: item.image,
+              active: item.active,
+              selected: selected.gallery === index,
+              viewHref: "/gallery",
+              onClick: () => selectAndOpen({ gallery: index }),
+              onDelete: () => {
+                mutate({ ...current, gallery: (current.gallery || []).filter((_, galleryIndex) => galleryIndex !== index) });
+                setSelected({ ...selected, gallery: 0 });
+              }
+            }))}
+          >
+            {activeGalleryImage && (
+              <GalleryEditor
+                image={activeGalleryImage}
+                onChange={(patch) => updateGallery(selected.gallery, patch)}
+                onDelete={() => {
+                  mutate({ ...current, gallery: (current.gallery || []).filter((_, index) => index !== selected.gallery) });
+                  setSelected({ ...selected, gallery: 0 });
+                }}
+              />
+            )}
+          </CrudShell>
+        )}
+
         {section === "testimonials" && (
           <CrudShell
             title="Testimonials"
@@ -1091,18 +1160,19 @@ export function AdminPanel() {
             </section>
             <section className="admin-access-stat-grid">
               <article className="admin-access-stat"><span>Role</span><b>1</b><p>Configured Twacha admin role.</p></article>
-              <article className="admin-access-stat"><span>Modules</span><b>8</b><p>Admin content modules currently active.</p></article>
+              <article className="admin-access-stat"><span>Modules</span><b>9</b><p>Admin content modules currently active.</p></article>
               <article className="admin-access-stat"><span>Coverage</span><b>{current.pages.length + current.services.length + current.doctors.length}</b><p>Pages, services and doctors managed.</p></article>
             </section>
             <section className="admin-access-card-grid">
               <article className="admin-access-card">
                 <span>Role studio</span>
                 <h3>Current access blueprint</h3>
-                <p>{adminUser.username} can manage website settings, pages, services, doctors, videos, testimonials and incoming leads.</p>
+                <p>{adminUser.username} can manage website settings, pages, services, doctors, gallery images, videos, testimonials and incoming leads.</p>
                 <div className="admin-chip-row">
                   <i>Settings.write</i>
                   <i>Pages.write</i>
                   <i>Services.write</i>
+                  <i>Gallery.write</i>
                   <i>Leads.read</i>
                   <i>Media.upload</i>
                 </div>
@@ -1126,11 +1196,12 @@ export function AdminPanel() {
   );
 }
 
-function CrudShell({ title, query, onQuery, onAdd, list, children }: {
+function CrudShell({ title, query, onQuery, onAdd, action, list, children }: {
   title: string;
   query: string;
   onQuery: (value: string) => void;
   onAdd: () => void;
+  action?: React.ReactNode;
   list: { id: number; title: string; subtitle: string; active: boolean; selected: boolean; viewHref?: string; onClick: () => void; onDelete: () => void }[];
   children: React.ReactNode;
 }) {
@@ -1138,6 +1209,7 @@ function CrudShell({ title, query, onQuery, onAdd, list, children }: {
     onQuery("");
     onAdd();
   }
+  const addLabel = title === "Gallery" ? "Image" : title.endsWith("s") ? title.slice(0, -1) : title;
 
   return (
     <section className="admin-crud">
@@ -1149,7 +1221,8 @@ function CrudShell({ title, query, onQuery, onAdd, list, children }: {
         </div>
         <div className="admin-crud-actions">
           <button className="secondary-btn" type="button" onClick={() => onQuery("")}>Clear Search</button>
-          <button className="primary-btn" type="button" onClick={handleAdd}><Plus size={18} /> Add {title.slice(0, -1) || title}</button>
+          {action}
+          <button className="primary-btn" type="button" onClick={handleAdd}><Plus size={18} /> Add {addLabel}</button>
         </div>
       </div>
       <div className="admin-list-panel admin-filter-strip">
@@ -1296,6 +1369,17 @@ function VideoEditor({ video, onChange, onDelete }: { video: VideoItem; onChange
         <Field label="Embed URL" value={video.embedUrl || ""} onChange={(embedUrl) => onChange({ embedUrl })} />
         <ImageUploadField label="Thumbnail image" value={video.thumbnail || ""} onChange={(thumbnail) => onChange({ thumbnail })} />
         <Field label="Service slug" value={video.serviceSlug || ""} onChange={(serviceSlug) => onChange({ serviceSlug })} />
+      </div>
+    </EditorFrame>
+  );
+}
+
+function GalleryEditor({ image, onChange, onDelete }: { image: GalleryImage; onChange: (patch: Partial<GalleryImage>) => void; onDelete: () => void }) {
+  return (
+    <EditorFrame title={image.title} onDelete={onDelete} active={image.active} onActive={(active) => onChange({ active })}>
+      <div className="admin-form-grid">
+        <Field label="Title" value={image.title} onChange={(title) => onChange({ title })} />
+        <ImageUploadField label="Gallery image" value={image.image} onChange={(nextImage) => onChange({ image: nextImage })} />
       </div>
     </EditorFrame>
   );
@@ -1516,6 +1600,48 @@ function ImageUploadField({ label, value, onChange }: {
         </div>
       </div>
     </label>
+  );
+}
+
+function MultiImageUploadButton({ onUploaded }: { onUploaded: (urls: string[]) => void }) {
+  const [uploading, setUploading] = useState(false);
+
+  async function upload(files: FileList) {
+    setUploading(true);
+    const urls: string[] = [];
+    try {
+      for (const file of Array.from(files)) {
+        const formData = new FormData();
+        formData.append("file", file);
+        const response = await fetch("/api/admin/upload", {
+          method: "POST",
+          body: formData
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "Upload failed");
+        urls.push(result.url);
+      }
+      if (urls.length > 0) onUploaded(urls);
+    } finally {
+      setUploading(false);
+    }
+  }
+
+  return (
+    <span className="secondary-btn admin-file-button">
+      {uploading ? "Uploading..." : "Upload multiple"}
+      <input
+        type="file"
+        accept="image/*"
+        multiple
+        disabled={uploading}
+        onChange={(event) => {
+          const files = event.target.files;
+          if (files?.length) void upload(files);
+          event.target.value = "";
+        }}
+      />
+    </span>
   );
 }
 

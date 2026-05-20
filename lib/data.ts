@@ -1,7 +1,8 @@
 import { promises as fs } from "fs";
 import path from "path";
-import type { Appointment, ContactLead, ContentSection, Doctor, Service, SiteData, SitePage, SiteSettings, Testimonial, VideoItem } from "./types";
+import type { Appointment, ContactLead, ContentSection, Doctor, GalleryImage, Service, SiteData, SitePage, SiteSettings, Testimonial, VideoItem } from "./types";
 import { getDbConnection } from "./db";
+import { defaultGalleryImages } from "./gallery";
 
 const dataFile = path.join(process.cwd(), "data", "site-data.json");
 
@@ -31,13 +32,14 @@ type VideoRow = {
   service_slug: string | null;
 };
 type TestimonialRow = Omit<Testimonial, "active"> & { active: number };
+type GalleryRow = Omit<GalleryImage, "active"> & { active: number };
 type AppointmentRow = Omit<Appointment, "createdAt"> & { created_at: Date | string };
 type ContactLeadRow = Omit<ContactLead, "createdAt"> & { created_at: Date | string };
 
 async function getFileSiteData(): Promise<SiteData> {
   const raw = await fs.readFile(dataFile, "utf8");
   const parsed = JSON.parse(raw) as SiteData;
-  return { ...parsed, contactLeads: parsed.contactLeads || [] };
+  return { ...parsed, gallery: parsed.gallery || defaultGalleryImages, contactLeads: parsed.contactLeads || [] };
 }
 
 function parseJson<T>(value: string | null | undefined, fallback: T): T {
@@ -87,6 +89,7 @@ export async function getSiteData(): Promise<SiteData> {
       const [serviceRows] = await connection.query("SELECT * FROM services ORDER BY display_order, id");
       const [videoRows] = await connection.query("SELECT * FROM videos ORDER BY display_order, id");
       const [testimonialRows] = await connection.query("SELECT * FROM testimonials ORDER BY display_order, id");
+      const [galleryRows] = await connection.query("SELECT * FROM gallery_images ORDER BY display_order, id");
       const [appointmentRows] = await connection.query("SELECT * FROM appointments ORDER BY created_at DESC, id DESC");
       const [contactLeadRows] = await connection.query("SELECT * FROM contact_leads ORDER BY created_at DESC, id DESC");
 
@@ -153,6 +156,13 @@ export async function getSiteData(): Promise<SiteData> {
         active: Boolean(row.active)
       }));
 
+      const gallery: GalleryImage[] = (galleryRows as GalleryRow[]).map((row) => ({
+        id: row.id,
+        title: row.title,
+        image: row.image,
+        active: Boolean(row.active)
+      }));
+
       const allAppointments: Appointment[] = (appointmentRows as AppointmentRow[]).map((row) => ({
         id: row.id,
         name: row.name,
@@ -186,7 +196,7 @@ export async function getSiteData(): Promise<SiteData> {
         ...legacyContactLeads
       ];
 
-      return { settings, pages, doctors, services, videos, testimonials, appointments, contactLeads };
+      return { settings, pages, doctors, services, videos, gallery: gallery.length > 0 ? gallery : defaultGalleryImages, testimonials, appointments, contactLeads };
     } finally {
       await connection.end();
     }
@@ -205,6 +215,7 @@ async function saveSiteDataToConnection(connection: Awaited<ReturnType<typeof ge
     await connection.query("DELETE FROM services");
     await connection.query("DELETE FROM videos");
     await connection.query("DELETE FROM testimonials");
+    await connection.query("DELETE FROM gallery_images");
     await connection.query("DELETE FROM appointments");
     await connection.query("DELETE FROM contact_leads");
 
@@ -248,6 +259,13 @@ async function saveSiteDataToConnection(connection: Awaited<ReturnType<typeof ge
       await connection.execute(
         "INSERT INTO testimonials (id, name, note, rating, active, display_order) VALUES (?, ?, ?, ?, ?, ?)",
         [testimonial.id, testimonial.name, testimonial.note, testimonial.rating, testimonial.active ? 1 : 0, index]
+      );
+    }
+
+    for (const [index, image] of (data.gallery || defaultGalleryImages).entries()) {
+      await connection.execute(
+        "INSERT INTO gallery_images (id, title, image, active, display_order) VALUES (?, ?, ?, ?, ?)",
+        [image.id, image.title, image.image, image.active ? 1 : 0, index]
       );
     }
 

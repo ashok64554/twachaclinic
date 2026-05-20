@@ -118,6 +118,16 @@ async function ensureModuleTables(connection: mysql.Connection) {
     ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
   `);
   await connection.query(`
+    CREATE TABLE IF NOT EXISTS gallery_images (
+      id INT PRIMARY KEY,
+      title VARCHAR(255) NOT NULL,
+      image VARCHAR(500) NOT NULL,
+      active TINYINT(1) NOT NULL DEFAULT 1,
+      display_order INT NOT NULL DEFAULT 0,
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+  `);
+  await connection.query(`
     CREATE TABLE IF NOT EXISTS appointments (
       id INT PRIMARY KEY AUTO_INCREMENT,
       name VARCHAR(180) NOT NULL,
@@ -156,6 +166,7 @@ async function ensureModuleTables(connection: mysql.Connection) {
   await addColumnIfMissing(connection, "services", "detail_html", "LONGTEXT");
   await addColumnIfMissing(connection, "services", "display_order", "INT NOT NULL DEFAULT 0");
   await addColumnIfMissing(connection, "testimonials", "display_order", "INT NOT NULL DEFAULT 0");
+  await addColumnIfMissing(connection, "gallery_images", "display_order", "INT NOT NULL DEFAULT 0");
   await addColumnIfMissing(connection, "appointments", "doctor", "VARCHAR(180)");
 }
 

@@ -16,6 +16,45 @@ const teamDepartments = [
   ["Our Janitors Team", "Surender, Ajay, Sandeep, Sunny are the unsung heroes who maintain impeccable cleanliness throughout the clinic. They ensure that treatment chambers are sanitized before and after each session, contributing significantly to our clinic's reputation for cleanliness."]
 ];
 
+const doctorListingText: Record<string, { title?: string; summary: string; highlights: string[] }> = {
+  "dr-tapesh-sharma": {
+    title: "Cosmetic & General Dermatology",
+    summary: "Co-founder and Medical Director of TWACHA Skin Clinic, known for face aesthetics, Anti-Wrinkle Treatment, dermal fillers and advanced dermatology.",
+    highlights: [
+      "Comprehensive skin, hair and aesthetic treatments.",
+      "Member of IACD, IADVL, ACSI and CDSI.",
+      "Trainer and speaker for dermatologists nationwide."
+    ]
+  },
+  "dr-richa-sharma": {
+    title: "Cosmetic & General Dermatology",
+    summary: "Co-founder and Medical Director of TWACHA Skin Clinics with deep expertise in hair disorders, aesthetic dermatology and academic-led patient care.",
+    highlights: [
+      "MBBS and MD Dermatology from Lady Hardinge Medical College.",
+      "Former lecturer and consultant dermatologist.",
+      "AAD, IADVL, ACSI, CDSI, IWDA and PDS member."
+    ]
+  },
+  "dr-neha-gupta": {
+    title: "Consultant Dermatologist",
+    summary: "Consultant Dermatologist, Aesthetic Dermatologist and Cosmetologist experienced in lasers, skin surgeries, peels and advanced procedures.",
+    highlights: [
+      "MBBS, MD and DNB in Dermatology.",
+      "Skilled in skin surgeries, lasers, PRP and peels.",
+      "Active presenter and author in dermatology."
+    ]
+  },
+  "dr-prachi-gupta": {
+    title: "Consultant Dermatologist",
+    summary: "Consultant Dermatologist, Aesthetic Physician and Hair Transplant Surgeon with over 12 years of clinical experience in skin, hair and aesthetics.",
+    highlights: [
+      "M.B.B.S and D.D.V.L qualified.",
+      "Expertise in advanced skin and hair treatments.",
+      "Experienced hair transplant surgeon."
+    ]
+  }
+};
+
 export default async function DoctorsPage() {
   const data = await getSiteData();
   const services = data.services.filter((service) => service.active);
@@ -48,11 +87,11 @@ export default async function DoctorsPage() {
                   <img src={doctor.image} alt={doctor.name} />
                 </Link>
                 <div>
-                  <span>{doctor.title}</span>
+                  <span>{doctorListingText[doctor.slug]?.title || doctor.title}</span>
                   <h3><Link href={`/doctors/${doctor.slug}`}>{doctor.name}</Link></h3>
-                  <p>{doctor.summary}</p>
+                  <p>{doctorListingText[doctor.slug]?.summary || doctor.summary}</p>
                   <ul>
-                    {doctor.highlights.slice(0, 3).map((item) => <li key={item}>{item}</li>)}
+                    {(doctorListingText[doctor.slug]?.highlights || doctor.highlights).slice(0, 3).map((item) => <li key={item}>{item}</li>)}
                   </ul>
                   <Link className="doctors-profile-link" href={`/doctors/${doctor.slug}`}>
                     View Profile <ArrowRight size={16} />

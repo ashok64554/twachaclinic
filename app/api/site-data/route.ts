@@ -14,7 +14,7 @@ export async function PUT(request: NextRequest) {
   }
 
   const next = await request.json() as SiteData;
-  if (!next.settings || !Array.isArray(next.services) || !Array.isArray(next.doctors) || !Array.isArray(next.pages) || (next.videos && !Array.isArray(next.videos))) {
+  if (!next.settings || !Array.isArray(next.services) || !Array.isArray(next.doctors) || !Array.isArray(next.pages) || (next.videos && !Array.isArray(next.videos)) || (next.gallery && !Array.isArray(next.gallery))) {
     return NextResponse.json({ error: "Invalid site data" }, { status: 400 });
   }
 

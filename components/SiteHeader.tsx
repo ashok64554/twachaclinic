@@ -75,6 +75,7 @@ export function SiteHeader({ settings }: { settings: SiteSettings }) {
             <button type="button"><span>Resources</span> <ChevronDown size={14} /></button>
             <div className="dropdown-panel compact-menu">
               <Link href="/videos" onClick={closeMenu}>Videos</Link>
+              <Link href="/gallery" onClick={closeMenu}>Gallery</Link>
             </div>
           </div>
           <Link className="nav-icon-link" href="/contact" onClick={closeMenu}>Contact Us</Link>
