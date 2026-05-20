@@ -613,9 +613,6 @@ export function AdminPanel() {
                 <button className="admin-login-button" type="submit">Enter Admin Panel</button>
               </form>
               {message && <p className="admin-message">{message}</p>}
-              <div className="admin-login-note">
-                <b>Default admin:</b> username <b>admin</b>, email <b>admin@twachaclinic.com</b>, password <b>admin@12345678</b>. Change this after first login.
-              </div>
             </div>
           </section>
           <section className="admin-login-art" aria-hidden="true" />

@@ -269,8 +269,8 @@ export default async function Home() {
             <div className="service-discovery-panel treatment-panel">
               <h3>Our <span>Treatments</span></h3>
               <div className="treatment-accordion">
-                {treatmentGroups.map((group) => (
-                  <details key={group.title}>
+                {treatmentGroups.map((group, index) => (
+                  <details key={group.title} name="home-treatment-groups" open={index === 0}>
                     <summary>
                       <span><img src={group.icon} alt="" /> {group.title}</span>
                       <ArrowRight size={20} />

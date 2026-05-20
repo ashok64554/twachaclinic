@@ -33,6 +33,9 @@ body {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -610,7 +613,12 @@ img {
   padding: 0 18px;
   border: 0;
   border-radius: 8px;
-  font-weight: 800;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  text-shadow: none;
   cursor: pointer;
 }
 
@@ -627,6 +635,22 @@ img {
 .secondary-btn {
   color: var(--aqua-dark);
   background: #f5edf3;
+}
+
+.classic-hero-btn,
+.popular-treatment-section .section-title > a,
+.featured-services .service-card a,
+.doctors-profile-link,
+.terms-sidebar .primary-btn,
+.appointment-band .primary-btn,
+.old-service-detail .vs-btn,
+.old-service-detail .primary-btn,
+.service-sticky-card a:not(.primary-btn),
+.mobile-quick-menu a {
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-shadow: none;
 }
 
 .danger-btn {
@@ -4126,6 +4150,74 @@ textarea {
   transform: none !important;
 }
 
+.old-service-detail .row.bg-white.align-items-center:has(.newsmedia) {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+  overflow: hidden;
+  margin: 22px 0 !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(141, 77, 134, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 18px 46px rgba(86, 97, 127, 0.08);
+}
+
+.old-service-detail .row.bg-white.align-items-center:has(.newsmedia) > [class*="col"] {
+  display: flex !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  min-height: 320px;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.old-service-detail .row.bg-white.align-items-center:has(.newsmedia) .newsmedia,
+.old-service-detail .row.bg-white.align-items-center:has(.newsmedia) .newsmedia a {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.old-service-detail .row.bg-white.align-items-center:has(.newsmedia) .newsmedia img {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  object-fit: cover !important;
+}
+
+.old-service-detail .row.bg-white.align-items-center:has(.newsmedia) > [class*="col"] > div:not(.newsmedia) {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 100% !important;
+  padding: clamp(24px, 3vw, 42px) !important;
+  background: linear-gradient(135deg, #fff7f2, #ffffff) !important;
+}
+
+.old-service-detail .row.bg-white.align-items-center:has(.newsmedia) h5 {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.old-service-detail .row.bg-white.align-items-center:has(.newsmedia) p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 16.5px;
+  line-height: 1.72;
+}
+
+.old-service-detail .row.bg-white.align-items-center:has(.newsmedia) .package-style1 {
+  margin-top: 4px;
+}
+
 .old-service-detail .bg-add {
   overflow: hidden;
   padding: 56px min(5vw, 72px) !important;
@@ -5114,7 +5206,7 @@ textarea {
 
 .service-sticky-card a:not(.primary-btn) {
   color: var(--logo-plum);
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .service-results-grid {
@@ -6314,6 +6406,23 @@ textarea {
     grid-template-columns: 1fr !important;
   }
 
+  .old-service-detail .row.bg-white.align-items-center:has(.newsmedia) {
+    grid-template-columns: 1fr !important;
+    margin: 18px 0 !important;
+  }
+
+  .old-service-detail .row.bg-white.align-items-center:has(.newsmedia) > [class*="col"] {
+    min-height: auto;
+  }
+
+  .old-service-detail .row.bg-white.align-items-center:has(.newsmedia) .newsmedia {
+    min-height: 260px;
+  }
+
+  .old-service-detail .row.bg-white.align-items-center:has(.newsmedia) > [class*="col"] > div:not(.newsmedia) {
+    padding: 24px !important;
+  }
+
   .old-service-detail .service-style1,
   .old-service-detail .service-style1.reverse {
     min-height: auto;
@@ -7494,7 +7603,7 @@ body {
     color: var(--logo-slate);
     border-radius: 12px;
     font-size: 9px;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 1.05;
     text-align: center;
     text-transform: uppercase;
