@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { Award, BookOpenText, CheckCircle2, Mail, Phone, ShieldCheck } from "lucide-react";
+import { CheckCircle2, Mail, Phone } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { getSiteData } from "@/lib/data";
@@ -109,6 +110,15 @@ export default async function DoctorDetail({ params }: Props) {
     <>
       <SiteHeader settings={data.settings} />
       <main className="doctor-detail-page">
+        <section className="doctor-detail-banner" aria-label="Twacha dermatology team">
+          <Image
+            src="/assets/img/team/team-breadcrumbs.webp"
+            alt="Twacha dermatology team"
+            width={1920}
+            height={500}
+            priority
+          />
+        </section>
         <section className="doctor-detail-hero">
           <div className="doctor-profile-card-large">
             <div className="doctor-profile-image-frame">
@@ -121,50 +131,17 @@ export default async function DoctorDetail({ params }: Props) {
             </div>
           </div>
           <div className="doctor-profile-copy">
-            <div className="detail-breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/doctors">Doctors</Link></div>
-            <span className="eyebrow">{speciality}</span>
             <h1>{doctor.name}</h1>
             <p>{profile.summary}</p>
+            <div className="doctor-highlight-list">
+              {profile.highlights.map((highlight) => (
+                <p key={highlight}><CheckCircle2 size={18} /> {highlight}</p>
+              ))}
+            </div>
             <div className="doctor-profile-actions">
               <Link className="primary-btn" href="/book-appointment">Book appointment</Link>
-              <a className="secondary-btn" href={`tel:${data.settings.phone}`}>Call clinic</a>
             </div>
           </div>
-        </section>
-
-        <section className="doctor-detail-content">
-          <article className="doctor-bio-panel">
-            <span className="eyebrow">Doctor profile</span>
-            <h2>About {doctor.name}</h2>
-            <p>{profile.summary}</p>
-            <div className="doctor-credential-strip">
-              <span><ShieldCheck size={18} /> Dermatologist-led care</span>
-              <span><BookOpenText size={18} /> Academic contribution</span>
-              <span><Award size={18} /> Aesthetic dermatology</span>
-            </div>
-          </article>
-
-          <article className="doctor-highlights-panel">
-            <div>
-              <span className="eyebrow">Experience</span>
-              <h2>Professional highlights</h2>
-            </div>
-            <div className="doctor-highlight-list">
-              {profile.highlights.map((highlight) => <p key={highlight}><CheckCircle2 size={18} /> {highlight}</p>)}
-            </div>
-          </article>
-
-          {profile.highlights.length > 0 && (
-            <article className="doctor-credentials-panel">
-              <span className="eyebrow">Education & associations</span>
-              <h2>Profile notes from Twacha</h2>
-              <div className="doctor-credentials-grid">
-                {profile.highlights.map((item, index) => (
-                  <p key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</p>
-                ))}
-              </div>
-            </article>
-          )}
         </section>
       </main>
       <SiteFooter settings={data.settings} services={services} />

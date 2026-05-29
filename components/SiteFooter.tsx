@@ -16,27 +16,27 @@ import type { Service, SiteSettings } from "@/lib/types";
 
 export function SiteFooter({ settings, services }: { settings: SiteSettings; services: Service[] }) {
   const treatments = [
-    ["Hydrafacial", "/services/hydrafacial"],
-    ["Dermal Fillers", "/services/dermal-fillers"],
-    ["PRP", "/services/prp"],
+    ["Hydrafacial", "/treatments/face/hydrafacial"],
+    ["Dermal Fillers", "/treatments/injectables/dermal-fillers"],
+    ["PRP", "/treatments/hair/prp"],
     ["Derma Clean", "/services/derma-clean"],
-    ["Anti-Wrinkle Treatment", "/services/anti-wrinkle-treatment"],
-    ["Chemical Peels", "/services/chemical-peels"],
-    ["LHR", "/services/laser-hair-reduction"],
-    ["Medifacials", "/services/medifacial"],
-    ["HIFU", "/services/hifu"],
-    ["Eyebrow Lift", "/services/eyebrow-lift"]
+    ["Anti-Wrinkle Treatment", "/treatments/injectables/anti-wrinkle"],
+    ["Chemical Peels", "/treatments/face/chemical-peels"],
+    ["LHR", "/treatments/laser/laser-hair-removal"],
+    ["Medifacials", "/treatments/face/medifacials"],
+    ["HIFU", "/treatments/face/hifu"],
+    ["Eyebrow Lift", "/treatments/injectables/brow-lift"]
   ];
   const conditions = [
-    ["Acne/Pimples", "/services/acne-pimple-conditions"],
-    ["Hyper Pigmentation", "/services/hyperpigmentation-condition"],
-    ["Melasma", "/services/melasma-condition"],
-    ["Wrinkles", "/services/wrinkle"],
-    ["Ageing", "/services/aging"],
-    ["Aesthetic/ Beauty Enhancement", "/services/aesthetic-and-beauty-enhancement"],
+    ["Acne/Pimples", "/conditions/acne"],
+    ["Hyper Pigmentation", "/conditions/hyperpigmentation"],
+    ["Melasma", "/conditions/melasma"],
+    ["Wrinkles", "/conditions/wrinkles"],
+    ["Ageing", "/conditions/ageing"],
+    ["Aesthetic/ Beauty Enhancement", "/conditions/aesthetic-enhancement"],
     ["Dermatological", "/services/dermatologic-conditions"],
-    ["Hair Fall/Loss", "/services/hairfall"],
-    ["Excessive Hair Growth", "/services/excessive-hair-growth"]
+    ["Hair Fall/Loss", "/conditions/hairfall"],
+    ["Excessive Hair Growth", "/conditions/excessive-hair-growth"]
   ];
 
   return (
@@ -92,6 +92,10 @@ export function SiteFooter({ settings, services }: { settings: SiteSettings; ser
         <div className="footer-legal-links">
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/terms-and-conditions">Terms & Conditions</Link>
+          <Link href="/medical-disclaimer">Medical Disclaimer</Link>
+          <Link href="/refund-policy">Refund Policy</Link>
+          <Link href="/cookie-policy">Cookie Policy</Link>
+          <Link href="/contact">Contact</Link>
         </div>
         <div className="footer-socials">
           <a href="https://www.facebook.com/twachaclinic?mibextid=LQQJ4d" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook size={17} /></a>
@@ -113,9 +117,9 @@ export function SiteFooter({ settings, services }: { settings: SiteSettings; ser
           <ContactRound size={18} aria-hidden="true" />
           <span>Contact</span>
         </Link>
-        <Link href="/services">
+        <Link href="/treatments">
           <Stethoscope size={18} aria-hidden="true" />
-          <span>Services</span>
+          <span>Treatments</span>
         </Link>
         <Link href="/videos">
           <PlaySquare size={18} aria-hidden="true" />

@@ -8,13 +8,12 @@ import { getPageContent } from "@/lib/pages";
 export default async function ContactPage() {
   const data = await getSiteData();
   const services = data.services.filter((service) => service.active);
-  const doctors = data.doctors.filter((doctor) => doctor.active);
   const page = getPageContent(data, "contact", {
     eyebrow: "Contact",
-    title: "Book a dermatologist consultation",
-    excerpt: "Reach Twacha Skin Clinic in Sector 12A, Dwarka, New Delhi."
+    title: "Contact Twacha Skin Clinic",
+    excerpt: "Send us your enquiry or reach our clinic team in Sector 12A, Dwarka, New Delhi."
   });
-  const mapQuery = encodeURIComponent(data.settings.address);
+  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224373.48742672353!2d77.01086404428206!3d28.514589312974216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03cce1261ab7%3A0xba873ba8bfdeb311!2sTwacha%20Skin%20%26%20Hair%20Clinic!5e0!3m2!1sen!2sin!4v1718190653652!5m2!1sen!2sin";
 
   return (
     <>
@@ -33,8 +32,8 @@ export default async function ContactPage() {
             <a href={data.settings.googleMapsUrl} target="_blank"><MapPin size={18} /> {data.settings.address}</a>
           </div>
           <div id="contact-form" className="contact-card">
-            <h2>Contact form</h2>
-            <AppointmentForm mode="contact" services={services.map((service) => service.title)} doctors={doctors.map((doctor) => doctor.name)} />
+            <h2>Send us a message</h2>
+            <AppointmentForm mode="contact" services={[]} />
           </div>
         </section>
         <section className="contact-map-section">
@@ -47,7 +46,7 @@ export default async function ContactPage() {
             <a href={data.settings.googleMapsUrl} target="_blank" rel="noreferrer">Get directions</a>
           </div>
           <iframe
-            src={`https://www.google.com/maps?q=${mapQuery}&output=embed`}
+            src={mapEmbedUrl}
             title="Twacha Skin Clinic map"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

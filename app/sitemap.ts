@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getSiteData } from "@/lib/data";
+import { conditionRoutes, treatmentRoutes } from "@/lib/routes";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://twachaclinic.com";
 
@@ -13,6 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const fixedPages = [
     "",
     "/about",
+    "/treatments",
     "/services",
     "/doctors",
     "/videos",
@@ -20,7 +22,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/contact",
     "/book-appointment",
     "/terms-and-conditions",
-    "/privacy-policy"
+    "/privacy-policy",
+    "/medical-disclaimer",
+    "/refund-policy",
+    "/cookie-policy",
+    "/resources/faqs",
+    "/resources/pre-care",
+    "/resources/post-care"
   ];
   const cmsPages = data.pages
     .filter((page) => page.active)
@@ -29,14 +37,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const servicePages = data.services
     .filter((service) => service.active)
     .map((service) => `/services/${service.slug}`);
+  const treatmentPages = treatmentRoutes.map((route) => `/treatments/${route.category}/${route.slug}`);
+  const conditionPages = conditionRoutes.map((route) => `/conditions/${route.slug}`);
   const doctorPages = data.doctors
     .filter((doctor) => doctor.active)
     .map((doctor) => `/doctors/${doctor.slug}`);
 
-  return [...fixedPages, ...cmsPages, ...servicePages, ...doctorPages].map((path) => ({
+  return [...fixedPages, ...cmsPages, ...treatmentPages, ...conditionPages, ...servicePages, ...doctorPages].map((path) => ({
     url: url(path),
     lastModified: now,
     changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : path.startsWith("/services/") ? 0.85 : 0.7
+    priority: path === "" ? 1 : path.startsWith("/treatments/") || path.startsWith("/conditions/") ? 0.85 : 0.7
   }));
 }

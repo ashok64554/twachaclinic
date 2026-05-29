@@ -131,7 +131,7 @@ export default async function AboutPage() {
             <span className="eyebrow">About Twacha Skin Clinic</span>
             <h2>Advanced dermatology care in Dwarka, New Delhi</h2>
             <p>Established by Dr. Tapesh Sharma and Dr. Richa Sharma, Twacha Skin Clinic is a premier centre of excellence in dermatology and aesthetics. Nestled in the upscale suburb of Dwarka, New Delhi, our clinic spans 3000 sq. ft., offering specialized consultation chambers, a photography room for progress tracking, and a pharmacy for trusted skincare products designed to enhance your care experience.</p>
-            <p>Our facility features advanced treatment areas where we perform various procedures from LASERS and MediFacials to PRP and RadioFrequency Surgery. <b>Consistently ranked among the top three Dermatology Clinics in Delhi NCR by the Times Health Survey,</b> Twacha is dedicated to providing innovative and effective skincare solutions, guided by our deep commitment to our clients' health and beauty.</p>
+            <p>Our facility features advanced treatment areas where we perform various procedures from LASERS and MediFacials to PRP and RadioFrequency Surgery. <b>Consistently ranked among the top three Dermatology Clinics in Delhi NCR by the Times Health Survey,</b> Twacha is dedicated to providing innovative and effective skincare solutions, guided by our deep commitment to our clients&apos; health and beauty.</p>
           </div>
         </section>
 

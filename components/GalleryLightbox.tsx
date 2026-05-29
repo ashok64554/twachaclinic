@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Plus, X } from "lucide-react";
 
 type GalleryLightboxItem = {
   image: string;
@@ -58,6 +58,11 @@ export function GalleryLightbox({ items }: { items: GalleryLightboxItem[] }) {
             aria-label={`Open ${title} gallery image`}
           >
             <img src={image} alt={`${title} gallery image`} />
+            <span className="home-gallery-overlay" aria-hidden="true">
+              <span className="home-gallery-plus"><Plus size={34} /></span>
+              <span className="home-gallery-title">{title}</span>
+              <span className="home-gallery-tag">Twacha Gallery</span>
+            </span>
           </button>
         ))}
       </div>

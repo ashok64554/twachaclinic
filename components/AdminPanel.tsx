@@ -52,8 +52,8 @@ const lines = (items: string[]) => items.join("\n");
 const splitLines = (value: string) => value.split("\n").map((item) => item.trim()).filter(Boolean);
 
 const adminRuntimeCss = `
-  body { margin: 0; background: #f4f7fb; color: #080e20; font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif; }
-  .admin-login-page { min-height: 100vh; display: grid; grid-template-columns: minmax(320px, 720px) minmax(260px, 1fr); background: linear-gradient(90deg, #fff 0 54%, #f3ebe3 54% 100%); color: #080e20; font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif; }
+  body { margin: 0; background: #f4f7fb; color: #080e20; font-family: var(--font-body); }
+  .admin-login-page { min-height: 100vh; display: grid; grid-template-columns: minmax(320px, 720px) minmax(260px, 1fr); background: linear-gradient(90deg, #fff 0 54%, #f3ebe3 54% 100%); color: #080e20; font-family: var(--font-body); }
   .admin-login-panel { display: grid; align-content: center; min-height: 100vh; padding: 56px clamp(28px, 8vw, 92px); box-sizing: border-box; }
   .admin-login-card { max-width: 660px; padding: 42px 54px; background: rgba(255,255,255,.9); border: 1px solid #eadfe6; border-radius: 34px; box-shadow: 0 28px 70px rgba(86,97,127,.12); }
   .admin-login-card h1 { margin: 18px 0 20px; max-width: 560px; color: #56617f; font-size: clamp(42px, 5vw, 70px); line-height: .95; letter-spacing: 0; }
@@ -173,7 +173,7 @@ const adminRuntimeCss = `
   .lead-list p { margin: 0; color: #344054; line-height: 1.55; }
 
   /* Clear CRM-style admin layout */
-  .admin-layout { grid-template-columns: 360px minmax(0, 1fr); background: #f6f9fd; font-family: "Segoe UI", Inter, Roboto, Arial, sans-serif; }
+  .admin-layout { grid-template-columns: 360px minmax(0, 1fr); background: #f6f9fd; font-family: var(--font-body); }
   .admin-sidebar { padding: 34px 24px; background: #090f20; border-right: 1px solid #d6dfeb; }
   .admin-brand { grid-template-columns: 70px 1fr; gap: 18px; padding: 8px 0 34px; }
   .admin-brand img { width: 70px; height: 70px; border-radius: 24px; }
@@ -272,7 +272,7 @@ const adminRuntimeCss = `
   body,
   .admin-layout,
   .admin-login-page {
-    font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: var(--font-body);
     font-weight: 400;
     letter-spacing: 0;
     -webkit-font-smoothing: antialiased;
@@ -290,7 +290,7 @@ const adminRuntimeCss = `
   .admin-access-card h3,
   .admin-editor-head h2,
   .admin-title-row h2 {
-    font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: var(--font-body);
     font-weight: 760;
     letter-spacing: -.035em;
   }

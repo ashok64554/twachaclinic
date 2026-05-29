@@ -38,7 +38,7 @@ export default async function BookAppointmentPage() {
           </div>
           <div className="booking-form-panel">
             <h2><CalendarDays size={26} /> Appointment details</h2>
-            <AppointmentForm services={services.map((service) => service.title)} doctors={doctors.map((doctor) => doctor.name)} />
+            <AppointmentForm services={services.map((service) => ({ title: service.title, category: service.category }))} doctors={doctors.map((doctor) => doctor.name)} />
           </div>
         </section>
       </main>

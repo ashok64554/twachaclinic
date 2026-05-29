@@ -9,6 +9,18 @@ function cleanText(text: string) {
   return text.replaceAll("â€™", "'").replaceAll("â€“", "-");
 }
 
+function normaliseTermsBody(heading: string, body: string[]) {
+  if (heading.toLowerCase().includes("payment") || heading.toLowerCase().includes("pricing")) {
+    return [
+      "Consultation fees, treatment estimates and package options are shared during clinic communication or in-person visit after assessment.",
+      "Treatment costs may vary according to diagnosis, procedure type, session count, product use and the personalised plan advised by the dermatologist.",
+      "Any advance, package or payment terms will be explained by the clinic team before collection."
+    ];
+  }
+
+  return body;
+}
+
 export default async function TermsPage() {
   const data = await getSiteData();
   const services = data.services.filter((service) => service.active);
@@ -46,15 +58,15 @@ export default async function TermsPage() {
                 <div className="terms-card-number">{String(index + 1).padStart(2, "0")}</div>
                 <div>
                   <h2>{section.heading}</h2>
-                  {section.body.length > 1 ? (
+                  {normaliseTermsBody(section.heading, section.body).length > 1 ? (
                     <>
-                      <p>{cleanText(section.body[0])}</p>
+                      <p>{cleanText(normaliseTermsBody(section.heading, section.body)[0])}</p>
                       <ul>
-                        {section.body.slice(1).map((text) => <li key={text}>{cleanText(text)}</li>)}
+                        {normaliseTermsBody(section.heading, section.body).slice(1).map((text) => <li key={text}>{cleanText(text)}</li>)}
                       </ul>
                     </>
                   ) : (
-                    section.body.map((text) => <p key={text}>{cleanText(text)}</p>)
+                    normaliseTermsBody(section.heading, section.body).map((text) => <p key={text}>{cleanText(text)}</p>)
                   )}
                 </div>
               </article>

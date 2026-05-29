@@ -106,7 +106,7 @@ export default async function DoctorsPage() {
           <div className="team-depth-intro">
             <span className="eyebrow">Complete Team</span>
             <h2>Meet Our Team at TWACHA Skin Clinic</h2>
-            <p>At TWACHA, our team is a passionate and dedicated group of professionals united by the mission to provide world-class dermatological care. Here's a glimpse of the key members who make it all happen.</p>
+            <p>At TWACHA, our team is a passionate and dedicated group of professionals united by the mission to provide world-class dermatological care. Here&apos;s a glimpse of the key members who make it all happen.</p>
           </div>
           <div className="team-department-grid">
             {teamDepartments.map(([title, text], index) => (

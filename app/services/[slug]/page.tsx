@@ -112,8 +112,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const data = await getSiteData();
-  return data.services.map((service) => ({ slug: service.slug }));
+  return [];
 }
 
 export default async function ServiceDetail({ params }: Props) {
@@ -404,7 +403,7 @@ export default async function ServiceDetail({ params }: Props) {
                 <div className="service-testimonial-grid">
                   {testimonialItems.map((item, index) => (
                     <article key={`${item.name}-${index}`}>
-                      <span aria-hidden="true">"</span>
+                      <span aria-hidden="true">&quot;</span>
                       <p>{item.quote}</p>
                       <b>{item.name}</b>
                     </article>
@@ -458,7 +457,7 @@ export default async function ServiceDetail({ params }: Props) {
         )}
         <section className="appointment-band">
           <div><span className="eyebrow">Next step</span><h2>Request an appointment</h2><p>Share your concern and the clinic team will call you back.</p></div>
-          <AppointmentForm services={services.map((item) => item.title)} doctors={doctors.map((doctor) => doctor.name)} />
+          <AppointmentForm services={services.map((item) => ({ title: item.title, category: item.category }))} doctors={doctors.map((doctor) => doctor.name)} />
         </section>
       </main>
       <SiteFooter settings={data.settings} services={services} />

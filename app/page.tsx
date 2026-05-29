@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Award, CalendarDays, CheckCircle2, Quote, ShieldCheck, Sparkles, Youtube } from "lucide-react";
 import { AppointmentForm } from "@/components/AppointmentForm";
 import { DoctorCard } from "@/components/DoctorCard";
@@ -9,7 +10,23 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { VideoTestimonialModal } from "@/components/VideoTestimonialModal";
 import { getSiteData } from "@/lib/data";
 import { getGalleryImages } from "@/lib/gallery";
+import { canonicalTreatmentHref } from "@/lib/routes";
 import { clinicJsonLd } from "@/lib/seo";
+
+function displayServiceName(title: string) {
+  return title
+    .replace(/\s+\|\s*.*$/g, "")
+    .replace(/^(Best|Expert)\s+/i, "")
+    .replace(/\s+Skin Treatment Clinic in Delhi$/i, "")
+    .replace(/\s+Treatment Clinic in Delhi$/i, " Treatment")
+    .replace(/\s+Specialist Clinic in Delhi$/i, "")
+    .replace(/\s+Clinic in Delhi$/i, "")
+    .replace(/\s+For Skin in Delhi$/i, "")
+    .replace(/\s+for Skin in Delhi$/i, "")
+    .replace(/\s+in Delhi(?:,\s*India)?$/i, "")
+    .replace(/\s+Treatment Treatment$/i, " Treatment")
+    .trim();
+}
 
 export default async function Home() {
   const data = await getSiteData();
@@ -28,85 +45,85 @@ export default async function Home() {
       title: "Face Treatments",
       icon: "/assets/img/icon/Face-treatment.png",
       links: [
-        ["Chemical Peels", "/services/chemical-peels"],
-        ["Derma Clean", "/services/derma-clean"],
-        ["Melasma", "/services/melasma-condition"],
-        ["Hyper Pigmentation", "/services/hyperpigmentation-condition"],
-        ["Acne/ Pimple Scars", "/services/acne-pimple-conditions"],
-        ["Medifacials", "/services/medifacial"],
-        ["Photofacial", "/services/intense-pulsed-light"],
-        ["Hydrafacial", "/services/hydrafacial"],
-        ["MNRF", "/services/microneedling-radiofrequency"],
-        ["Microblading", "/services/microblading"],
-        ["Double Chin", "/services/double-chin"],
-        ["HIFU", "/services/hifu"]
+        ["Chemical Peels", "/treatments/face/chemical-peels"],
+        ["Derma Clean", "/treatments/face/derma-clean"],
+        ["Melasma", "/treatments/face/melasma"],
+        ["Hyper Pigmentation", "/treatments/face/hyper-pigmentation"],
+        ["Acne/ Pimple Scars", "/treatments/face/acne-pimple-scars"],
+        ["Medifacials", "/treatments/face/medifacials"],
+        ["Photofacial", "/treatments/face/photofacial"],
+        ["Hydrafacial", "/treatments/face/hydrafacial"],
+        ["MNRF", "/treatments/face/mnrf"],
+        ["Microblading", "/treatments/face/microblading"],
+        ["Double Chin", "/treatments/face/double-chin"],
+        ["HIFU", "/treatments/face/hifu"]
       ]
     },
     {
       title: "Laser Treatments",
       icon: "/assets/img/icon/Laser-Tretment.png",
       links: [
-        ["Laser Hair Removal", "/services/laser-hair-reduction"],
-        ["Picosecond Laser", "/services/pico-laser"],
-        ["Q-Switched Nd Yag Laser", "/services/q-switched-nd-yag-laser"]
+        ["Laser Hair Removal", "/treatments/laser/laser-hair-removal"],
+        ["Picosecond Laser", "/treatments/laser/pico-laser"],
+        ["Q-Switched Nd Yag Laser", "/treatments/laser/q-switched-nd-yag"]
       ]
     },
     {
       title: "Hair Growth",
       icon: "/assets/img/icon/Hair-Growth.png",
       links: [
-        ["PRP", "/services/prp"],
-        ["QR678", "/services/qr-678"],
-        ["Regenerative Skin Therapy", "/services/regenerative-skin-therapy"],
-        ["GFC", "/services/gfc"],
-        ["Hair Drip", "/services/hair-drip"]
+        ["PRP", "/treatments/hair/prp"],
+        ["QR678", "/treatments/hair/qr678"],
+        ["Regenerative Skin Therapy", "/treatments/hair/regenerative-skin-therapy"],
+        ["GFC", "/treatments/hair/gfc"],
+        ["Hair Drip", "/treatments/hair/hair-drip"]
       ]
     },
     {
       title: "Cosmetic Injectables",
       icon: "/assets/img/icon/cosmotice-injectiron.png",
       links: [
-        ["Dermal Fillers", "/services/dermal-fillers"],
-        ["Anti-Wrinkle Treatment", "/services/anti-wrinkle-treatment"],
-        ["Threads", "/services/thread-lift"],
-        ["SKIN REJUVENATION TREATMENT", "/services/skin-rejuvenation-treatment"],
-        ["Brow Lift", "/services/eyebrow-lift"],
-        ["Mesotherapy", "/services/mesotherapy"],
-        ["Skin Boosters", "/services/skin-booster-injections"],
-        ["Wrinkles", "/services/wrinkle"],
-        ["Face Lift", "/services/face-lift"],
-        ["Lip Beautification", "/services/lip-beautification"],
-        ["Ear Lobe Repair", "/services/ear-lobe-repair"],
-        ["Face Slimming", "/services/face-slimming"],
-        ["Double Chin", "/services/double-chin"]
+        ["Dermal Fillers", "/treatments/injectables/dermal-fillers"],
+        ["Anti-Wrinkle Treatment", "/treatments/injectables/anti-wrinkle"],
+        ["Threads", "/treatments/injectables/threads"],
+        ["SKIN REJUVENATION TREATMENT", "/treatments/injectables/skin-rejuvenation-treatment"],
+        ["Brow Lift", "/treatments/injectables/brow-lift"],
+        ["Mesotherapy", "/treatments/injectables/mesotherapy"],
+        ["Skin Boosters", "/treatments/injectables/skin-boosters"],
+        ["Wrinkles", "/treatments/injectables/wrinkles"],
+        ["Face Lift", "/treatments/injectables/face-lift"],
+        ["Lip Beautification", "/treatments/injectables/lip-beautification"],
+        ["Ear Lobe Repair", "/treatments/injectables/ear-lobe-repair"],
+        ["Face Slimming", "/treatments/injectables/face-slimming"],
+        ["Double Chin", "/treatments/injectables/double-chin"]
       ]
     },
     {
       title: "Body Treatments",
       icon: "/assets/img/icon/body - treatment.png",
       links: [
-        ["Body Polish", "/services/body-polish"],
-        ["Chemical Peels", "/services/chemical-peels"],
-        ["Stretch Marks", "/services/stretch-marks-treatment"],
-        ["HIFU", "/services/hifu"]
+        ["Body Polish", "/treatments/body/body-polish"],
+        ["Chemical Peels", "/treatments/body/chemical-peels-for-body"],
+        ["Stretch Marks", "/treatments/body/stretch-marks"],
+        ["HIFU", "/treatments/body/hifu"]
       ]
     },
     {
       title: "IV Nutrition",
       icon: "/assets/img/icon/iv-neutration.png",
-      links: [["IV Nutrition", "/services/iv-nutrition"]]
+      links: [["IV Nutrition", "/treatments/body/iv-nutrition"]]
     }
   ];
   const conditionTiles = [
-    ["Acne/Pimples", "/services/acne-pimple-conditions", "/assets/img/icon/Acne.png"],
-    ["Hyper Pigmentation", "/services/hyperpigmentation-condition", "/assets/img/icon/Hyperpigmentation.png"],
-    ["Melasma", "/services/melasma-condition", "/assets/img/icon/Melasma.png"],
-    ["Wrinkles", "/services/wrinkle", "/assets/img/icon/Wrinkles.png"],
-    ["Ageing", "/services/aging", "/assets/img/icon/agening.png"],
-    ["Aesthetic/ Beauty Enhancement", "/services/aesthetic-and-beauty-enhancement", "/assets/img/icon/beauty-enhancement.png"],
-    ["Dermatological", "/services/dermatologic-conditions", "/assets/img/icon/Dermatological.png"],
-    ["Hair Fall/Loss", "/services/hairfall", "/assets/img/icon/Hairfall.png"],
-    ["Excessive Hair Growth", "/services/excessive-hair-growth", "/assets/img/icon/Hair-Growth.png"]
+    ["Acne/Pimples", "/conditions/acne", "/assets/img/icon/Acne.png"],
+    ["Hyper Pigmentation", "/conditions/hyperpigmentation", "/assets/img/icon/Hyperpigmentation.png"],
+    ["Melasma", "/conditions/melasma", "/assets/img/icon/Melasma.png"],
+    ["Wrinkles", "/conditions/wrinkles", "/assets/img/icon/Wrinkles.png"],
+    ["Ageing", "/conditions/ageing", "/assets/img/icon/agening.png"],
+    ["Aesthetic/ Beauty Enhancement", "/conditions/aesthetic-enhancement", "/assets/img/icon/beauty-enhancement.png"],
+    ["Dermatological", "/conditions/dermatological", "/assets/img/icon/Dermatological.png"],
+    ["Hair Fall/Loss", "/conditions/hairfall", "/assets/img/icon/Hairfall.png"],
+    ["Excessive Hair Growth", "/conditions/excessive-hair-growth", "/assets/img/icon/Hair-Growth.png"]
   ];
   const technologyService = services.find((service) => service.slug === "3d-skin-analyzer");
   const popularServices = [
@@ -212,7 +229,14 @@ export default async function Home() {
           </div>
           <div className="hero-media">
             <div className="hero-image-frame">
-              <img src="/assets/img/banner/Banner-2.webp" alt="Beautiful skin results at Twacha Skin Clinic" />
+              <Image
+                src="/assets/img/banner/Banner-2.webp"
+                alt="Beautiful skin results at Twacha Skin Clinic"
+                width={900}
+                height={900}
+                sizes="(max-width: 900px) 100vw, 48vw"
+                priority
+              />
             </div>
           </div>
         </section>
@@ -229,11 +253,27 @@ export default async function Home() {
 
         <section className="trust-row">
           {[
-            ["Expert Dermatologists", "Consultations and procedure planning by qualified doctors."],
-            ["Modern Technology", "Lasers, skin analysis and advanced aesthetic procedures."],
-            ["Patient-first Care", "Clear counselling, hygiene, aftercare and follow-up support."]
-          ].map(([title, text]) => (
-            <article key={title}><CheckCircle2 size={22} /><b>{title}</b><span>{text}</span></article>
+            {
+              title: "Expert Dermatologists",
+              text: "Consultations and procedure planning by qualified doctors.",
+              icon: <ShieldCheck size={25} />
+            },
+            {
+              title: "Modern Technology",
+              text: "Lasers, skin analysis and advanced aesthetic procedures.",
+              icon: <Sparkles size={25} />
+            },
+            {
+              title: "Patient-first Care",
+              text: "Clear counselling, hygiene, aftercare and follow-up support.",
+              icon: <CheckCircle2 size={25} />
+            }
+          ].map((item) => (
+            <article key={item.title}>
+              <span className="trust-icon">{item.icon}</span>
+              <b>{item.title}</b>
+              <span>{item.text}</span>
+            </article>
           ))}
         </section>
 
@@ -255,7 +295,13 @@ export default async function Home() {
             rel="noreferrer"
             aria-label="Open Twacha Clinic YouTube channel"
           >
-            <img src="/assets/img/banner/about-img.webp" alt="Twacha consultation room" />
+            <Image
+              src="/assets/img/banner/about-img.webp"
+              alt="Twacha consultation room"
+              width={820}
+              height={620}
+              sizes="(max-width: 900px) 100vw, 45vw"
+            />
             <span><Youtube size={18} /> Twacha Clinic YouTube</span>
           </a>
         </section>
@@ -301,7 +347,13 @@ export default async function Home() {
         <section className="section home-story-band">
           <div className="why-clinic-layout">
             <div className="why-clinic-media">
-              <img src="/assets/img/about/Why-choose-us.webp" alt="Why choose Twacha Skin Clinic" />
+              <Image
+                src="/assets/img/about/Why-choose-us.webp"
+                alt="Why choose Twacha Skin Clinic"
+                width={760}
+                height={640}
+                sizes="(max-width: 900px) 100vw, 42vw"
+              />
             </div>
             <div className="why-clinic-copy">
               <span className="eyebrow">Twacha Skin Clinic</span>
@@ -343,7 +395,7 @@ export default async function Home() {
               <h2>Signature treatments</h2>
               <p className="section-lead">Focused skin, laser, hair and aesthetic procedures selected from the services patients ask for most at Twacha.</p>
             </div>
-            <Link href="/services">View all</Link>
+            <Link href="/treatments">View all</Link>
           </div>
           <div className="service-grid">
             {featuredServices.map((service) => service && <ServiceCard key={service.slug} service={service} />)}
@@ -361,12 +413,18 @@ export default async function Home() {
                 <span>AI-assisted analysis</span>
                 <span>Personalised treatment planning</span>
               </div>
-              <Link className="primary-btn" href={`/services/${technologyService.slug}`}>
+              <Link className="primary-btn" href={canonicalTreatmentHref(technologyService)}>
                 Learn about skin analysis <ArrowRight size={18} />
               </Link>
             </div>
             <div className="technology-visual">
-              <img src="/assets/img/ISEMECO-3D-D9-Skin.webp" alt={technologyService.title} />
+              <Image
+                src="/assets/img/ISEMECO-3D-D9-Skin.webp"
+                alt={technologyService.title}
+                width={820}
+                height={620}
+                sizes="(max-width: 900px) 100vw, 45vw"
+              />
               <div className="technology-metric top">
                 <strong>3D</strong>
                 <span>facial skin mapping</span>
@@ -386,13 +444,13 @@ export default async function Home() {
               <h2>More treatments patients ask about</h2>
               <p className="section-lead">Quick access to high-interest procedures patients commonly compare before booking a consultation.</p>
             </div>
-            <Link href="/services">Full library</Link>
+            <Link href="/treatments">Full library</Link>
           </div>
           <div className="popular-treatment-grid">
             {popularServices.map((service, index) => service && (
-              <Link href={`/services/${service.slug}`} key={service.slug}>
+              <Link href={canonicalTreatmentHref(service)} key={service.slug}>
                 <small>{String(index + 1).padStart(2, "0")}</small>
-                <b>{service.title}</b>
+                <b>{displayServiceName(service.title)}</b>
                 <span>{service.category}</span>
               </Link>
             ))}
@@ -469,7 +527,7 @@ export default async function Home() {
             <h2>Tell us your skin or hair concern</h2>
             <p>The clinic team will use this information to help schedule the right consultation. This form does not provide emergency medical advice.</p>
           </div>
-          <AppointmentForm services={services.map((service) => service.title)} doctors={doctors.map((doctor) => doctor.name)} />
+          <AppointmentForm services={services.map((service) => ({ title: service.title, category: service.category }))} doctors={doctors.map((doctor) => doctor.name)} />
         </section>
       </main>
       <SiteFooter settings={data.settings} services={services} />
